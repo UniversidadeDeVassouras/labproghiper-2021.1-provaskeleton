@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Exemplo Prova</title>
+	</head>
+	<body>
+		<h1>Categorias</h1>
+		{% for categoria in categoria_list %}
+			<h2>{{categoria.get_nome()}}</h2>
+			<h3>Vídeos Mais curtidos</h3>
+			{% for video in categoria.get_video_list() %}
+				<p> <a href="{{url_for('videos', id=video.get_id())}}">{{video.get_titulo()}}<a></p>
+			{% endfor %}
+		{% endfor %}
+	</body>
+</html>
