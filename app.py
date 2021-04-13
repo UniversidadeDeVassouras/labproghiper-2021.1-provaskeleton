@@ -4,9 +4,9 @@ from video import Video
 
 app = Flask(__name__)
 
-videos_culinaria = [Video(1, 'Como fazer strogonoff'), Video(2, 'Como fazer risotto?')]
-videos_trailers = [Video(3, 'Batman vs Superman'), Video(4, 'Vingadores Ultimato')]
-videos_anime = [Video(5, 'One Piece Temp 200'), Video(6, 'Naturo Temporada 400')]
+videos_culinaria = [Video(1, 'Como fazer strogonoff', 'strogonoff-de-frango.jpg'), Video(2, 'Como fazer risotto?', 'risotto.jpg')]
+videos_trailers = [Video(3, 'Batman vs Superman', 'batvssuper.jpg'), Video(4, 'Vingadores Ultimato', None)]
+videos_anime = [Video(5, 'One Piece Temp 200', None), Video(6, 'Naturo Temporada 400', None)]
 
 categoria_list = []
 categoria_list.append(Categoria(1, 'Culinária', videos_culinaria))

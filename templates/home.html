@@ -9,6 +9,7 @@
 			<h3>Vídeos Mais curtidos</h3>
 			{% for video in categoria.get_video_list() %}
 				<p> <a href="{{url_for('videos', id=video.get_id())}}">{{video.get_titulo()}}<a></p>
+				<img style='width:100px' src="{{url_for('static', filename=video.get_filename())}}" />
 			{% endfor %}
 		{% endfor %}
 	</body>
